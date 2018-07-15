@@ -7,7 +7,7 @@
      <div class="post__meta">
         <span class="post__date">
             <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                <i class="icon-calendar" aria-hidden="true"></i>
             </span>
             <span>发表于</span>
             <time datetime="{{post.create}}">{{ post.create| date: "%Y-%m-%d" }}</time>
@@ -15,7 +15,7 @@
         <span class="post__date">
              |
             <span class="post-meta-item-icon">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="icon-pencil" aria-hidden="true"></i>
             </span>
             <span>修改于</span>
             <time datetime="{{post.date}}">{{ post.date| date: "%Y-%m-%d" }}</time>
@@ -23,14 +23,14 @@
         <span class="post-category">
              |
             <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"  aria-hidden="true"></i>
+                <i class="icon-folder"  aria-hidden="true"></i>
             </span>
             <span class="post-meta-item-text">分类于 {{post.category}}</span>
         </span>
         <span class="post-count">
              |
             <span class="post-meta-item-icon">
-                <i class="fa fa-book" aria-hidden="true"></i>
+                <i class="icon-book" aria-hidden="true"></i>
             </span>
             <span class="post-meta-item-text">总字数 {{post.content | strip_html | strip_newlines | size}}</span>
         </span>
