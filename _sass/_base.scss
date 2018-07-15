@@ -72,88 +72,10 @@ h4 {
 
 strong {
   font-weight: 600; }
-/* blockquotes */
 
-blockquote {
-  margin: 1.5em 0 1.5em 2em;
-  padding-left: .5em;
-  padding-right: .5em;
-  font-style: italic;
-  border-left: 0.25em solid $light-gray;
-
-  p {
-    color: $dark-gray;
-  }
-
-  cite {
-    font-style: italic;
-
-    &:before {
-      content: "\2014";
-      padding-right: 5px;
-    }
-  }
-  @include breakpoint(mobileonly) {
-    margin-left: 0;
-  }
-}
-
-iframe {
-  margin-top: 1.5em;
-  @include breakpoint(mobileonly) {
-    height: 260px;
-  }
-}
-
-/* code */
-
-tt, code, kbd, samp, pre {
-  font-family: $code-font;
-}
 
 
 p {
   margin-bottom: 1.3em;
-}
-
-ul.list {
-  list-style-type: none;
-  counter-reset: counter;
-  padding-left:20px;
-  ul {
-    counter-reset: counter;
-    list-style-type:none;
-    padding-left:20px;
-    li::before {
-      counter-increment: counter;
-      content: counters(counter, '.') ' ';
-    }
-  }
-  li::before {
-    counter-increment: counter;
-    content: counters(counter, '.') '. ';
-  }
-}
-
-/* reduce orphans and widows when printing */
-
-p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
-  orphans: 3;
-  widows: 3;
-}
-
-/* abbreviations */
-
-abbr[title],
-abbr[data-original-title] {
-  text-decoration: none;
-  cursor: help;
-  border-bottom: 1px dotted $text-color;
-}
-
-/* Fix IE9 SVG bug */
-
-svg:not(:root) {
-  overflow: hidden;
 }
 
