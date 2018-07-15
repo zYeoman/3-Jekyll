@@ -114,8 +114,6 @@ function afterPjax() {
   $("a:external").attr({"rel":"noopener", "target":"_blank"});
   $(document).pjax("[href^='/']", "#pjax", { fragment: "#pjax", timeout: 10000 });
 
-  $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
-
   // Smooth scrolling
   $("#markdown-toc").on("click", "a", function() {
     var target = $(this.hash);
@@ -131,18 +129,6 @@ function afterPjax() {
       $(this).attr('href', decodeURIComponent(href));
   });
 
-  // Scrolling highlight
-  $("#post").scroll(function() {
-          $(":header").each(function() {
-          if($(window).scrollTop() + $(window).height()/3 >= $(this).offset().top) {
-              var id = $(this).attr("id");
-              $("a").parent().removeClass("active");
-              $("a[href='#"+id+"']").parent().addClass("active").parent().parent().addClass("active");
-          }
-      });
-  });
-  $("#post__content img").popImg();
-
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
   {% if site.analytics.google %}
@@ -157,6 +143,7 @@ function afterPjax() {
       appKey: "{{site.leancloud.app_key}}",
       placeholder: "LONG MAY THE SUN SHINE!",
       path:window.location.pathname,
+      visitor:true,
       avatar:"retro"
   });
   var url = window.location.toString();
