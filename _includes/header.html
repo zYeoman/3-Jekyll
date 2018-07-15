@@ -14,10 +14,13 @@
 
 <link rel="canonical" href="{{ site.url  }}"/>
 <link rel="preconnect" href="https://www.google.com"/>
-<link rel="stylesheet" type="text/css" href="/assets/css/base.css"/>
 <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 <script defer src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
 <script defer src="/assets/js/av-min.js"></script>
 <script defer src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script defer src="/assets/js/script.js"></script>
+{% capture styles %}
+{% include base.scss %}
+{% endcapture %}
+<style> {{ styles | scssify  }} </style>
