@@ -129,6 +129,17 @@ function afterPjax() {
       $(this).attr('href', decodeURIComponent(href));
   });
 
+  // Scrolling highlight
+  $("#post").scroll(function() {
+          $(":header").each(function() {
+          if($(window).scrollTop() + $(window).height()/3 >= $(this).offset().top) {
+              var id = $(this).attr("id");
+              $("a").parent().removeClass("active");
+              $("a[href='#"+id+"']").parent().addClass("active").parent().parent().addClass("active");
+          }
+      });
+  });
+
   $("script[type='math/tex']").replaceWith(
     function(){
       var tex = $(this).text();
