@@ -260,7 +260,7 @@ li.tags {
     background: rgba(242, 242, 242, 0.5);
   }
   &:visited > .pl-title {
-      color: $light-gray;
+      color: $gray;
   }
   &:visited > .pl-circle {
     background: $list-background-color;
@@ -301,7 +301,7 @@ li.tags {
 }
 
 .pl-date {
-  color: $light-gray;
+  color: $gray;
   font-size: 14px;
   float: right;
 }
