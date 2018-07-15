@@ -12,15 +12,6 @@ layout: null
 if ($(window).width() <= 1280) {
   $("#sidebar").addClass("mobile");
 }
-  $(function() {
-    $(document).on("pjax:popstate", function() {
-      $(document).one("pjax:end", function(event) {
-        $(event.target).find("script").each(function() {
-          $.globalEval(this.text || this.textContent || this.innerHTML || '');
-        })
-      });
-    });
-  });
 var valine = new Valine();
 
 // Variables
