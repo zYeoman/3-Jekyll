@@ -129,22 +129,36 @@ function afterPjax() {
       $(this).attr('href', decodeURIComponent(href));
   });
 
-  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" +
+        katex.renderToString(tex) +
+        "</span>";
+    });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" +
+        katex.renderToString("\\displaystyle "+tex) +
+        "</div>";
+    });
 
   {% if site.analytics.google %}
-      ga('send', 'pageview', window.location.pathname);
+  ga('send', 'pageview', window.location.pathname);
   {% endif %}
 
   valine.init({
-      el: "#comment" ,
-      notify:false,
-      verify:false,
-      appId: "{{site.leancloud.app_id}}",
-      appKey: "{{site.leancloud.app_key}}",
-      placeholder: "LONG MAY THE SUN SHINE!",
-      path:window.location.pathname,
-      visitor:true,
-      avatar:"retro"
+    el: "#comment" ,
+    notify:false,
+    verify:false,
+    appId: "{{site.leancloud.app_id}}",
+    appKey: "{{site.leancloud.app_key}}",
+    placeholder: "LONG MAY THE SUN SHINE!",
+    path:window.location.pathname,
+    visitor:true,
+    avatar:"retro"
   });
   var url = window.location.toString();
   var id = decodeURIComponent(url).split('#');
