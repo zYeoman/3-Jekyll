@@ -16,6 +16,11 @@
 <link href="/rss.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml">
 
 <link rel="preconnect" href="https://www.google-analytics.com"/>
+{% if site.canonical %}
+<link rel="canonical" href="{{ site.canonical }}"/>
+{% else %}
+<link rel="canonical" href="{{ site.url }}"/>
+{% endif %}
 <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 <script defer src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
