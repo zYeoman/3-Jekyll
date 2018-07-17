@@ -2,17 +2,19 @@
 layout: null
 ---
 
-// Detect window size, if less than 1280px add class "mobile" to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
-if ($(window).width() <= 1280) {
-  $("#sidebar").addClass("mobile");
-}
-var valine = new Valine();
-
 // Variables
 var sidebar    = $("#sidebar"),
     container  = $("#post"),
     content    = $("#pjax"),
     button     = $("#js-fullscreen");
+
+// Detect window size, if less than 1280px add class "mobile" to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
+if ($(window).width() <= 1280) {
+  sidebar.addClass("mobile").addClass("fullscreen");
+  button.addClass("fullscreen");
+  content.addClass("fullscreen");
+}
+var valine = new Valine();
 
 $.expr[':'].external = function(obj){
     return !obj.href.match(/^mailto\:/)
