@@ -2,12 +2,6 @@
 layout: null
 ---
 
-/*!--------------------------------*\
-   3-Jekyll Theme
-   @author Peiwen Lu (P233)
-   https://github.com/P233/3-Jekyll
-\*---------------------------------*/
-
 // Detect window size, if less than 1280px add class "mobile" to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
 if ($(window).width() <= 1280) {
   $("#sidebar").addClass("mobile");
@@ -140,21 +134,14 @@ function afterPjax() {
       });
   });
 
-  $("script[type='math/tex']").replaceWith(
-    function(){
-      var tex = $(this).text();
-      return "<span class=\"inline-equation\">" +
-        katex.renderToString(tex) +
-        "</span>";
-    });
-
-  $("script[type='math/tex; mode=display']").replaceWith(
-    function(){
-      var tex = $(this).text();
-      return "<div class=\"equation\">" +
-        katex.renderToString("\\displaystyle "+tex) +
-        "</div>";
-    });
+  $("script[type='math/tex']").replaceWith(function() {
+    var tex = $(this).html();
+    return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: false});
+  });
+  $("script[type='math/tex; mode=display']").replaceWith(function() {
+    var tex = $(this).html();
+    return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
+  });
 
   {% if site.analytics.google %}
   ga('send', 'pageview', window.location.pathname);
