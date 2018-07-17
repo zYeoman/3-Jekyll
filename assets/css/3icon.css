@@ -1,11 +1,7 @@
 @font-face {
   font-family: '3icon';
-  src: url('../font/3icon.eot?692554');
-  src: url('../font/3icon.eot?692554#iefix') format('embedded-opentype'),
-       url('../font/3icon.woff2?692554') format('woff2'),
-       url('../font/3icon.woff?692554') format('woff'),
-       url('../font/3icon.ttf?692554') format('truetype'),
-       url('../font/3icon.svg?692554#3icon') format('svg');
+  src: url('../font/3icon.ttf') format('truetype');
+  src: url('../font/3icon.eot') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
