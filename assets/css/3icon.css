@@ -1,7 +1,7 @@
 @font-face {
   font-family: '3icon';
-  src: url('../font/3icon.ttf') format('truetype');
-  src: url('../font/3icon.eot') format('embedded-opentype');
+  src: url('../font/3icon.ttf') format('truetype'),
+       url('../font/3icon.eot') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
