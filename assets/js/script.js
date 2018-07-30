@@ -5,14 +5,11 @@ layout: null
 // Variables
 var sidebar    = $("#sidebar"),
     container  = $("#post"),
-    content    = $("#pjax"),
-    button     = $("#js-fullscreen");
+    content    = $("#pjax");
 
 // Detect window size, if less than 1280px add class "mobile" to sidebar therefore it will be auto hide when trigger the pjax request in small screen devices.
 if ($(window).width() <= 1280) {
-  sidebar.addClass("mobile").addClass("fullscreen");
-  button.addClass("fullscreen");
-  content.addClass("fullscreen");
+  sidebar.addClass("mobile");
 }
 var valine = new Valine();
 
@@ -34,23 +31,20 @@ $("#tags-ul").on("click","li",function(event){
 $(".pl-all").on("click","span.pl-title",function() {
   $(this).addClass("active").siblings().removeClass("active");
   if (sidebar.hasClass("mobile")) {
-    sidebar.addClass("fullscreen");
-    button.addClass("fullscreen");
-    content.addClass("fullscreen");
+    sidebar.removeClass("fullscreen");
+    content.removeClass("fullscreen");
   }
 });
 
 // Enable fullscreen.
-button.on("click", function() {
-  if (button.hasClass("fullscreen")) {
+$("#js-fullscreen").on("click", function() {
+  if (sidebar.hasClass("fullscreen")) {
     sidebar.removeClass("fullscreen");
-    button.removeClass("fullscreen");
     content.delay(300).queue(function(){
       $(this).removeClass("fullscreen").dequeue();
     });
   } else {
     sidebar.addClass("fullscreen");
-    button.addClass("fullscreen");
     content.delay(200).queue(function(){
       $(this).addClass("fullscreen").dequeue();
     });
@@ -58,9 +52,8 @@ button.on("click", function() {
 });
 
 $("#mobile-avatar").on("click", function(){
-    sidebar.addClass("fullscreen");
-    button.addClass("fullscreen");
-    content.addClass("fullscreen");
+    sidebar.removeClass("fullscreen");
+    content.removeClass("fullscreen");
 });
 
 //Search Box

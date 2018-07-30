@@ -18,11 +18,11 @@
     position: absolute;
     z-index: 97;
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(-37.5em);
+    transform: translateX(-37.5em);
     &.fullscreen {
-      -webkit-transform: translateX(-37.5em);
-      transform: translateX(-37.5em);
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
     }
   }
   @include breakpoint(mobileonly) {

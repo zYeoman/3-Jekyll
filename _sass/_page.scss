@@ -17,6 +17,7 @@
 
 #pjax {
   height: 100%;
+  max-width: 750px;
   padding: 0 1em 30px;
   &.fadeIn {
     -webkit-animation: fadeIn .5s;
@@ -26,11 +27,10 @@
     -webkit-animation: fadeOut .3s;
     animation: fadeOut .3s;
   }
-  @include breakpoint(desktop) {
-      max-width: 75%;
-  }
   @include breakpoint(nodesktop) {
-      max-width: 1000px;
+      margin: 0 auto;
+  }
+  &.fullscreen {
       margin: 0 auto;
   }
 }
@@ -49,4 +49,7 @@
 .flash {
   -webkit-animation: flash .6s;
   animation: flash .6s;
+}
+#full {
+  min-height: 100%;
 }
