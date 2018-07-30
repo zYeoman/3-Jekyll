@@ -7,19 +7,19 @@
   height: 100%;
   float: left;
   @include breakpoint(desktop) {
-    width: 37.5em;
+    width: $sidebar-width;
     transition: margin-left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     &.fullscreen{
-      margin-left: -37.5em;
+      margin-left: -30em;
     }
   }
   @include breakpoint(nodesktop) {
-    width: 25em;
+    width: $sidebar-width-small;
     position: absolute;
     z-index: 97;
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    -webkit-transform: translateX(-37.5em);
-    transform: translateX(-37.5em);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
     &.fullscreen {
       -webkit-transform: translateX(0);
       transform: translateX(0);
@@ -36,7 +36,7 @@
 \*---------------------------------*/
 nav.tags {
   display: block;
-  width: 10.5em;
+  width: $tags-width;
   height: 100%;
   background: $tags-background-color;
   border-right: 1px solid $tags-border-color-dark;
@@ -47,7 +47,7 @@ nav.tags {
   -ms-user-select: none;
   user-select: none;
   @include breakpoint(nodesktop) {
-    width: 7.5em;
+    width: $tags-width-small;
   }
   @include breakpoint(mobileonly) {
     display: none;
@@ -159,21 +159,14 @@ li.tags {
 #posts-list {
   display: block;
   visibility: visible;
-  width: 27em;
+  overflow: hidden;
   height: 100%;
   background: $post-bg;
   border-right: 1px solid $lighter-gray;
-  float: left;
   position: relative;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  @include breakpoint(nodesktop) {
-    width: 17.5em;
-  }
-  @include breakpoint(mobileonly) {
-    width: 100%;
-  }
 }
 
 #search-form {
