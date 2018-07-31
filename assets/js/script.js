@@ -28,7 +28,7 @@ $("#tags-ul").on("click","li",function(event){
 });
 
 // If sidebar has class "mobile", hide it after clicking.
-$(".pl-all").on("click","span.pl-title",function() {
+$("#pl-container").on("click","a.pl-all",function() {
   $(this).addClass("active").siblings().removeClass("active");
   if (sidebar.hasClass("mobile")) {
     sidebar.removeClass("fullscreen");
