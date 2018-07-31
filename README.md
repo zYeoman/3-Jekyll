@@ -19,3 +19,6 @@ remote_theme: zYeoman/3-Jekyll
 - WebPack 打包压缩 JS 文件
 - 使用[Ant Design](https://ant.design)
 - 在线编辑、预览
+
+## BUGS
+- [ ] Android Chrome没有下拉刷新
