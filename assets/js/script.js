@@ -36,6 +36,15 @@ $("#pl-container").on("click","a.pl-all",function() {
   }
 });
 
+$(document).mouseup(function(e){
+  if(!sidebar.is(e.target) && sidebar.has(e.target).length === 0) {
+    if(sidebar.hasClass("mobile") && sidebar.hasClass("fullscreen")) {
+      sidebar.removeClass("fullscreen");
+      content.removeClass("fullscreen");
+    }
+  }
+});
+
 // Enable fullscreen.
 $("#js-fullscreen").on("click", function() {
   if (sidebar.hasClass("fullscreen")) {
