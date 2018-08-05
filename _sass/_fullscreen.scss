@@ -13,11 +13,8 @@
   outline: none;
   cursor: pointer;
   position: fixed;
-  -webkit-transition: box-shadow .35s;
   transition: box-shadow .35s;
   z-index: 99;
-  -webkit-appearance: none;
-  appearance: none;
 
   &:hover {
     color: $success-color;

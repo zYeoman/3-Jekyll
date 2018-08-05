@@ -18,10 +18,8 @@
     position: absolute;
     z-index: 97;
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     &.fullscreen {
-      -webkit-transform: translateX(0);
       transform: translateX(0);
     }
   }
@@ -203,8 +201,6 @@ li.tags {
   background: $list-background-color;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-  appearance: none;
   cursor: text;
   &::-webkit-input-placeholder {
     color: $light-gray;

@@ -87,11 +87,10 @@ $(document).on({
     content.removeClass("fadeIn").addClass("fadeOut");
   },
   "pjax:start": function() {
-    content.css({"opacity":0});
   },
   "pjax:end": function() {
     container.scrollTop(0);
-    content.css({"opacity":1}).removeClass("fadeOut").addClass("fadeIn");
+    content.removeClass("fadeOut").addClass("fadeIn");
     afterPjax();
   }
 });
@@ -106,11 +105,7 @@ function afterPjax() {
   // Smooth scrolling
   $("#markdown-toc").on("click", "a", function() {
     var target = $(this.hash);
-    container.animate({scrollTop: target.offset().top + container.scrollTop() - 70}, 500, function() {
-      target.addClass("flash").delay(700).queue(function() {
-        $(this).removeClass("flash").dequeue();
-      });
-    });
+    container.animate({scrollTop: target.offset().top + container.scrollTop() - 70}, 500, function() { });
   });
 
   $("#markdown-toc").find("a").each(function() {
