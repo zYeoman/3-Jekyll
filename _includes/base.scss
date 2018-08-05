@@ -156,6 +156,7 @@ p {
     width: $sidebar-width;
   }
   @include breakpoint(nodesktop) {
+    transform: translateX(-100%);
     width: $sidebar-width-small;
     position: absolute;
   }
