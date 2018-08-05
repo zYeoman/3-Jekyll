@@ -14,9 +14,6 @@
   margin: 2em 0;
   padding: 1em;
   color: $dark-gray;
-  font-family: $head-font;
-  font-size: $type-size-5;
-  text-indent: initial;
   background-color: mix(#fff, $notice-color, 90%);
   border-radius: $border-radius;
   box-shadow: 0 1px 1px rgba($notice-color, 0.25);
@@ -46,7 +43,6 @@
 
   a {
     color: $notice-color;
-
     &:hover {
       color: mix(#000, $notice-color, 40%);
     }
@@ -64,31 +60,10 @@
 }
 
 /* Default notice */
-
 .notice {
   @include notice($info-color);
 }
-
-/* Info notice */
-
-.notice--info {
-  @include notice($info-color);
-}
-
 /* Warning notice */
-
 .notice--warning {
   @include notice($warning-color);
-}
-
-/* Success notice */
-
-.notice--success {
-  @include notice($success-color);
-}
-
-/* Danger notice */
-
-.notice--danger {
-  @include notice($danger-color);
 }
