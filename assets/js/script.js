@@ -72,16 +72,14 @@ $("#mobile-avatar").on("click", function(){
 $(function(){
     //搜索框文字变化时间
     $("#search-input").keyup(function(){
-        //$("#s-box").hide("slow");
         var text = $("#search-input").val().toLowerCase();
-        //console.log(text);
         if(text =="" || text==undefined){
             $("#pl-container").find("a").show();
         }else{
             $("#pl-container").find("a").hide();
             $(".pl-title").each(function(){
                 var htmlstr = $(this).html().toLowerCase();
-                if(htmlstr.indexOf(text) != -1){
+                if(PinyinMatch.match(htmlstr, text)){
                     $(this).parent().show();
                 }
             });
