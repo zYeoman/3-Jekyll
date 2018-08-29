@@ -94,10 +94,11 @@ $(document).on({
     content.removeClass("fadeIn").addClass("fadeOut");
   },
   "pjax:start": function() {
+    content.css({"opacity":0});
   },
   "pjax:end": function() {
     container.scrollTop(0);
-    content.removeClass("fadeOut").addClass("fadeIn");
+    content.css({"opacity":1}).removeClass("fadeOut").addClass("fadeIn");
     afterPjax();
   }
 });
