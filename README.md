@@ -21,4 +21,4 @@ remote_theme: zYeoman/3-Jekyll
 - 在线编辑、预览
 
 ## BUGS
-- [ ] Android Chrome没有下拉刷新
+- [x] Android Chrome没有下拉刷新
