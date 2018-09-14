@@ -51,6 +51,9 @@
 #full {
   min-height: 100%;
 }
+.katex .katex-mathml {
+  display: none;
+}
 // Animation
 @keyframes fadeIn {
   from {
