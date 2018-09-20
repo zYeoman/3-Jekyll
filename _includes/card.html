@@ -11,6 +11,15 @@
       </span>
         |
       {% endif %}
+      {% if post.ref %}
+      <span class="post__reprint">
+        <span class="post-meta-item-icon">
+          <i class="icon-pencil" aria-hidden="true"></i>
+        </span>
+        <span>转载</span>
+      </span>
+        |
+      {% endif %}
       <span class="post__date">
         <span class="post-meta-item-icon">
           <i class="icon-calendar" aria-hidden="true"></i>
