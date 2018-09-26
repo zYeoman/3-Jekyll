@@ -32,7 +32,7 @@ $("#pl-container").on("click","a.pl-all",function() {
   $(this).addClass("active").siblings().removeClass("active");
   if (sidebar.hasClass("mobile")) {
     sidebar.removeClass("fullscreen");
-    content.removeClass("fullscreen");
+    container.removeClass("fullscreen");
   }
 });
 
@@ -40,7 +40,7 @@ $(document).mouseup(function(e){
   if(!sidebar.is(e.target) && sidebar.has(e.target).length === 0) {
     if(sidebar.hasClass("mobile") && sidebar.hasClass("fullscreen")) {
       sidebar.removeClass("fullscreen");
-      content.removeClass("fullscreen");
+      container.removeClass("fullscreen");
     }
   }
 });
@@ -49,12 +49,12 @@ $(document).mouseup(function(e){
 $("#js-fullscreen").on("click", function() {
   if (sidebar.hasClass("fullscreen")) {
     sidebar.removeClass("fullscreen");
-    content.delay(300).queue(function(){
+    container.delay(300).queue(function(){
       $(this).removeClass("fullscreen").dequeue();
     });
   } else {
     sidebar.addClass("fullscreen");
-    content.delay(200).queue(function(){
+    container.delay(200).queue(function(){
       $(this).addClass("fullscreen").dequeue();
     });
   }
@@ -62,7 +62,7 @@ $("#js-fullscreen").on("click", function() {
 
 $("#mobile-avatar").on("click", function(){
     sidebar.removeClass("fullscreen");
-    content.removeClass("fullscreen");
+    container.removeClass("fullscreen");
 });
 
 //Search Box

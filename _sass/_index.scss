@@ -15,19 +15,18 @@
     transform: translate(0px, -2px);
     box-shadow: 0 15px 45px -10px $post-card-border;
   }
-
-  .post-content {
+  .post-title {
+    margin: 0 0 10px;
+    padding: unset;
+    font-weight: 400;
+    a {
+      font-family: $post-font;
+      text-decoration: none;
+    }
+  }
+  .post-container {
     padding: 1rem;
     width: 100%;
-    .post-title {
-      margin: 0 0 10px;
-      font-size: 30px;
-      font-weight: 400;
-      a {
-        font-family: $post-font;
-        text-decoration: none;
-      }
-    }
     p {
       margin-top: 0;
     }

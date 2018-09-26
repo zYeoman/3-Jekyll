@@ -1,4 +1,4 @@
-<div class="article_copyright">
+<section class="article-copyright">
     <p><span class="text-nowrap">文章标题:</span>{{ page.title }}</p>
     <p><span class="text-nowrap">文章字数:</span><span class="post-count">{{ content | strip_html | strip_newlines | size }}</span></p>
     <p><span class="text-nowrap">本文作者:</span>{% if page.ref %}转载</p> {% else %}{{ site.author.name }}</p>{% endif %}
@@ -11,4 +11,4 @@
     <p>
         <span class="text-nowrap">版权声明:</span><span><i class="icon-creative-commons" aria-hidden="true"></i></span> <a rel="noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
-</div>
+</section>

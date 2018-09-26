@@ -1,17 +1,17 @@
-#copyright {
+.post-footer {
   font-size: 9px;
   text-align: center;
   color: $light-gray;
-  border-top: 2px solid $light-gray;
-  a {
-    color: $info-color;
-  }
-  a:hover {
-    text-decoration: underline;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  hr,p {
+    margin: 0;
   }
 }
 
-.article_copyright {
+.article-copyright {
   padding: 5px 30px;
   margin-bottom: 20px;
   margin-left: auto;
