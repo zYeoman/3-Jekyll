@@ -79,8 +79,28 @@ tt, code, kbd, samp, pre {
 
 pre {
   padding: 1em;
+  max-height: 800px;
   width: 100%;
   overflow: auto;
+  // overflow-y: hidden;
+  // &:hover {
+  //   overflow-y: scroll;
+  // }
+  // https://css-tricks.com/examples/WebKitScrollbars/
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background: gray;
+  }
   background: #282828;
   color: #ebdbb2;
   border-radius: 4px;
@@ -108,7 +128,20 @@ pre > code {
   border-radius: 4px;
   font: .85em Consolas, Monaco, 'Andale Mono', monospace; }
 
-.highlight { margin: 1.715em 0; }
+.highlight {
+  margin: 1.715em 0;
+  position: relative;
+  .btn {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+  &:hover .btn, .btn:focus{
+    opacity: 1;
+  }
+}
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #928374; font-style: italic;} /* Comment */
 .highlight .err { color: #ebdbb2;} /* Error */

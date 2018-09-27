@@ -12,6 +12,24 @@ if ($(window).width() <= 1280) {
   sidebar.addClass("mobile");
 }
 var valine = new Valine();
+var clipboardSnippets = new ClipboardJS('[data-clipboard-snippet]',{
+  target: function(trigger) {
+    return trigger.nextElementSibling;
+  }
+});
+clipboardSnippets.on('success', function(e) {
+  e.trigger.innerText = "copied!";
+  setTimeout(function() {
+    e.trigger.innerText = "copy";
+  }, 1200);
+  e.clearSelection();
+});
+clipboardSnippets.on('error', function(e) {
+  e.trigger.innerText = "fail!";
+  setTimeout(function() {
+    e.trigger.innerText = "copy";
+  }, 1200);
+});
 
 $.expr[':'].external = function(obj){
     return !obj.href.match(/^mailto\:/)
@@ -162,5 +180,8 @@ function afterPjax() {
     var target = $("#"+id[1]);
     container.delay(700).animate({scrollTop: target.offset().top + container.scrollTop() - 70}, 500, function() { });
   }
+  $("div.highlight").each(function() {
+    $(this).prepend('<button class="btn" data-clipboard-snippet>copy</button>')
+  })
 }afterPjax();
 
