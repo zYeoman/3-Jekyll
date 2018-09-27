@@ -141,7 +141,7 @@ function afterPjax() {
 
   // Scrolling highlight
   $("#post").scroll(function() {
-          $(":header").each(function() {
+          $("h2").each(function() {
           if($(window).scrollTop() + $(window).height()/3 >= $(this).offset().top) {
               var id = $(this).attr("id");
               $("a").parent().removeClass("active");
