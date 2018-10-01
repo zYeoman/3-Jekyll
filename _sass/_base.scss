@@ -32,7 +32,7 @@ img {
   }
 }
 
-img + br + em {
+img + br + em, img + em {
   display: block;
   text-align: center;
   font-size: 12px;
@@ -40,6 +40,12 @@ img + br + em {
 
 img + br {
   display: none;
+}
+
+summary {
+  &:focus {
+    outline: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
