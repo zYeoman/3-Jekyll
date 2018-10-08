@@ -144,8 +144,7 @@ function afterPjax() {
           $("h2").each(function() {
           if($(window).scrollTop() + $(window).height()/3 >= $(this).offset().top) {
               var id = $(this).attr("id");
-              $("a").parent().removeClass("active");
-              $("a[href='#"+id+"']").parent().addClass("active").parent().parent().addClass("active");
+              $("a[href='#"+id+"']").parent().addClass("active").siblings().removeClass("active");
           }
       });
   });

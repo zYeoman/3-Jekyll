@@ -1,33 +1,30 @@
 #markdown-toc {
   position: fixed;
   left: calc(75vw + 12em);
+  right: 5em;
   top: 4em;
-  max-width: 22em;
-  min-width: 10em;
-  max-height: calc(100vh - 100px);
+  bottom: 0;
+  padding-left: 0;
+  max-width: 200px;
   z-index: 10000;
   box-sizing: border-box;
-  background-color: $list-background-color;
-  padding: 1em;
   font-size: calc(12px + 0.1vw);
   font-family: $head-font;
   line-height: 2;
   font-weight: normal;
-  border: 1px solid $light-gray;
+  border-left: 1px solid $light-gray;
   -webkit-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
   overflow-x: hidden;
   overflow-y: auto;
-  will-change: transform, max-width;
-  transition: max-width 0.3s;
   @include breakpoint(nodesktop) {
     display: none;
   }
   &:before {
     content: "目录";
+    padding-left: 1em;
   }
   ul, li {
-    list-style: none;
     padding-left: 0;
     display: block;
   }
@@ -41,22 +38,33 @@
     text-overflow: ellipsis;
     overflow-x: hidden;
     white-space: nowrap;
+    transition: 1s;
   }
 
-  li.active>a, li:hover>a{
-    background-color: $lighter-gray;
-    border-radius: 4px;
+  li.active>a, li:hover>a {
+    color: #009A61;
+  }
+
+  li.active {
+    &>a {
+      background-color: #ECECEC;
+      border-left: 2px solid #009A61;
+    }
+    ul li {
+      display: block;
+    }
   }
 
   li a {
-    padding-left: 0.3em;
+    padding-left: 1em;
+    border-left: 2px solid $code-background-color;
   }
 
   ul li a {
-    padding-left: 1.3em;
+    padding-left: 2em;
   }
 
-  ul ul {
+  ul li {
     display: none;
   }
 
