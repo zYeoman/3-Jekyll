@@ -89,23 +89,27 @@ pre {
   // https://css-tricks.com/examples/WebKitScrollbars/
   &::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
   }
   /* Track */
   &::-webkit-scrollbar-track {
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
   }
   /* Handle */
   &::-webkit-scrollbar-thumb {
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
-      background: gray;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: gray;
   }
   background: #282828;
   color: #ebdbb2;
   border-radius: 4px;
   word-wrap: break-word;
   white-space: pre-wrap;
+  @include breakpoint(mobileonly) {
+    white-space: pre;
+  }
 }
 
 pre > code {
