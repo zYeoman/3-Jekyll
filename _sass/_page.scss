@@ -44,19 +44,22 @@ main {
 }
 
 .post-meta {
-    color: $gray;
-    font-size: $type-size-5;
+  color: $gray;
+  font-size: $type-size-5;
 }
 
 .post-top {
-    color: red;
+  color: red;
 }
 
 .post-extend {
   display: flex;
   .post-extend-content {
     flex: 1;
-    width: 50%;
+    flex-basis: 50%;
+  }
+  @include breakpoint(nodesktop) {
+    flex-direction: column;
   }
 }
 
