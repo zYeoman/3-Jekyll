@@ -13,8 +13,6 @@
   line-height: 2;
   font-weight: normal;
   border-left: 1px solid $light-gray;
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-smoothing: subpixel-antialiased;
   overflow-x: hidden;
   overflow-y: auto;
   @include breakpoint(nodesktop) {

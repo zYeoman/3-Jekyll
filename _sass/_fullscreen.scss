@@ -3,21 +3,13 @@
   height: 40px;
   top: 12px;
   right: 20px;
-  margin: 0;
-  padding: 0;
-  color: $dark-gray;
-  background: $lighter-gray;
   border-radius: 50%;
   border: none;
-  box-shadow: 0 0 10px 10px transparent;
   outline: none;
-  cursor: pointer;
   position: fixed;
-  transition: box-shadow .35s;
   z-index: 99;
 
   &:hover {
-    color: $success-color;
     box-shadow: 0 0 0 3px $light-gray;
   }
   @include breakpoint(mobileonly) {
