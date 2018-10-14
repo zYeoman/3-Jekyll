@@ -3,7 +3,7 @@
    Sidebar => Tags & Posts List
 \*---------------------------------*/
 #sidebar {
-  display: block;
+  display: flex;
   height: 100%;
   float: left;
   @include breakpoint(desktop) {
@@ -32,20 +32,19 @@
 /*---------------------------------*\
    Tags
 \*---------------------------------*/
-nav.tags {
-  display: block;
-  width: $tags-width;
+#posts-tags {
+  display: flex;
+  min-width: $tags-width;
+  flex-direction: column;
   height: 100%;
   background: $tags-background-color;
   border-right: 1px solid $tags-border-color-dark;
   box-shadow: inset -15px 0 15px -15px #222;
-  float: left;
-  position: relative;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   @include breakpoint(nodesktop) {
-    width: $tags-width-small;
+    min-width: $tags-width-small;
   }
   @include breakpoint(mobileonly) {
     display: none;
@@ -75,6 +74,7 @@ nav.tags {
   visibility: visible;
   opacity: 1;
   display: block;
+  flex: auto;
   margin: 0;
   padding: 0;
   font-size: 17px;
@@ -125,13 +125,9 @@ li.tags {
 }
 
 .tags-bottom {
-  width: 100%;
-  height: 44px;
+  min-height: 44px;
   border-top: 1px solid $tags-border-color-dark;
   overflow: hidden;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   &> .fontello{
     width: 33.33%;
     font-size: 18px;
@@ -156,6 +152,7 @@ li.tags {
 \*---------------------------------*/
 #posts-list {
   display: block;
+  flex: auto;
   visibility: visible;
   overflow: hidden;
   height: 100%;
