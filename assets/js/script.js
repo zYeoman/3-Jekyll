@@ -67,14 +67,10 @@ $(document).mouseup(function(e){
 $("#js-fullscreen").on("click", function() {
   if (sidebar.hasClass("fullscreen")) {
     sidebar.removeClass("fullscreen");
-    container.delay(300).queue(function(){
-      $(this).removeClass("fullscreen").dequeue();
-    });
+    container.removeClass("fullscreen");
   } else {
     sidebar.addClass("fullscreen");
-    container.delay(200).queue(function(){
-      $(this).addClass("fullscreen").dequeue();
-    });
+    container.addClass("fullscreen");
   }
 });
 
