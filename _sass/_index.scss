@@ -1,14 +1,7 @@
 .post {
-  width: 100%;
-  max-width: 100%;
   margin-top: 1.5em;
   background: white;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  min-height: 11rem;
   border-radius: 10px;
-  overflow: hidden;
   transition: all .3s ease;
   box-shadow: 0 1px 1px 0px $post-card-border;
   &:hover {
@@ -41,6 +34,7 @@
     float: left;
     padding: 8px 16px;
     border: 1px solid $lighter-gray;
+    border-radius: 50%;
     text-decoration: none;
     &.active {
       background: $lighter-gray;
