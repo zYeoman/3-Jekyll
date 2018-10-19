@@ -145,15 +145,14 @@ p {
     width: 100%;
   }
 }
-nav.tags {
-  display: block;
-  width: $tags-width;
+#posts-tags {
+  display: flex;
+  min-width: $tags-width;
+  flex-direction: column;
   height: 100%;
   background: $tags-background-color;
-  float: left;
-  position: relative;
   @include breakpoint(nodesktop) {
-    width: $tags-width-small;
+    min-width: $tags-width-small;
   }
   @include breakpoint(mobileonly) {
     display: none;
