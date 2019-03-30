@@ -154,10 +154,6 @@ function afterPjax() {
     return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
   });
 
-  {% if site.analytics.google %}
-  ga('send', 'pageview', window.location.pathname);
-  {% endif %}
-
   valine.init({
     el: "#comment" ,
     notify:false,
