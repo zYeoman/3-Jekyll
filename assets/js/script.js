@@ -162,6 +162,13 @@ function afterPjax() {
     appKey: "{{site.leancloud.app_key}}",
     placeholder: "LONG MAY THE SUN SHINE!",
     path:window.location.pathname,
+    noemoji:true,
+    stickers: {
+      data: {
+"啊":"啊.png", "鄙视":"鄙视.png", "不高兴":"不高兴.png", "彩虹":"彩虹.png", "茶杯":"茶杯.png", "大拇指":"大拇指.png", "灯泡":"灯泡.png", "乖":"乖.png", "哈哈":"哈哈.png", "汗":"汗.png", "呵呵":"呵呵.png", "黑线":"黑线.png", "呼":"呼.png", "花心":"花心.png", "滑稽":"滑稽.png", "惊哭":"惊哭.png", "惊讶":"惊讶.png", "开心":"开心.png", "酷":"酷.png", "狂汗":"狂汗.png", "泪":"泪.png", "冷":"冷.png", "礼物":"礼物.png", "玫瑰":"玫瑰.png", "勉强":"勉强.png", "怒":"怒.png", "喷":"喷.png", "钱币":"钱币.png", "钱":"钱.png", "弱":"弱.png", "生气":"生气.png", "胜利":"胜利.png", "睡觉":"睡觉.png", "太开心":"太开心.png", "吐舌":"吐舌.png", "吐":"吐.png", "委屈":"委屈.png", "笑眼":"笑眼.png", "咦":"咦.png", "疑问":"疑问.png", "阴险":"阴险.png", "音乐":"音乐.png", "真棒":"真棒.png", "haha":"haha.png"
+      },
+      pre: "/assets/sm/paopao/"
+    },
     visitor:true,
     avatar:"retro"
   });
